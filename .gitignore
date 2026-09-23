@@ -1,0 +1,99 @@
+# ONLY ESSENTIAL FILES FOR DEPLOYMENT
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Frontend 
+frontend/node_modules/
+frontend/.expo/
+frontend/dist/
+frontend/web-build/
+
+# Backend
+backend/__pycache__/
+
+# Exclude everything else
+*.zip
+*.pdf
+*.pptx
+*.tlog
+*.md
+!README.md
+test_*
+thesis/
+Template/
+MyDrone/
+LLM/
+.kilo/
+.vscode/
+SkyJARVIS*
+
+# Backend specific
+backend/.venv/
+backend/venv/
+# backend/.env  # COMMENTED OUT - Including .env for team setup
+**/__pycache__/
+
+# Frontend specific
+frontend/node_modules/
+# frontend/.env  # COMMENTED OUT - Including .env for team setup
+frontend/.expo/
+frontend/dist/
+frontend/web-build/
+frontend/expo-env.d.ts
+frontend/ios/
+frontend/android/
+frontend/expo-env.d.ts
+
+# Common patterns
+*.pem
+*.key
+*.p12
+*.jks
+*.p8
+*.mobileprovision
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.tsbuildinfo
+.env*.local
+
+#AI IDES
+.cursorignore
+
+# Backend specific
+backend/.venv/
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+
+# Frontend specific
+frontend/node_modules/
+frontend/.expo/
+frontend/dist/
+frontend/web-build/
+frontend/expo-env.d.ts
+frontend/ios/
+frontend/android/
+frontend/venv/
+frontend/web-stubs/
+
+# Common patterns
+*.pem
+*.key
+*.p12
+*.jks
+*.p8
+*.mobileprovision
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.tsbuildinfo
+.env*.local
+
+# AI IDEs
+.cursorignore

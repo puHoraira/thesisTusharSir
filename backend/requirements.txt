@@ -1,0 +1,21 @@
+fastapi[all]
+uvicorn[standard]
+websockets
+pydantic
+mavsdk
+python-multipart
+aiofiles
+python-dotenv
+
+# LLM Integration
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-google-genai>=2.0.0
+langchain-openai>=0.2.0
+google-generativeai>=0.8.0
+
+# Local Model Support
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.24.0
+sentencepiece>=0.1.99

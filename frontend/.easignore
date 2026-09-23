@@ -1,0 +1,14 @@
+# EAS Build Ignore
+# Files to exclude from EAS uploads
+
+node_modules/**/*
+.expo/**/*
+.git/**/*
+*.log
+.DS_Store
+dist/**/*
+build/**/*
+android/**/*
+ios/**/*
+.vscode/**/*
+*.md
