@@ -25,7 +25,7 @@ test_*
 thesis/
 Template/
 MyDrone/
-LLM/
+*/LLM/
 .kilo/
 .vscode/
 SkyJARVIS*
@@ -46,6 +46,7 @@ frontend/expo-env.d.ts
 frontend/ios/
 frontend/android/
 frontend/expo-env.d.ts
+backend/.env
 
 # Common patterns
 *.pem
@@ -96,4 +97,4 @@ yarn-error.*
 .env*.local
 
 # AI IDEs
-.cursorignore
+.cursorignorebackend/.env

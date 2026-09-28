@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyJARVIS - AI Drone Control</title>
+    <link
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        background: radial-gradient(
+          ellipse at 30% 20%,
+          #0c1929 0%,
+          #000000 70%
+        );
+        color: #f8fafc;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* --- Top Half: Hero --- */
+      .hero {
+        height: 42vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.5rem;
+        padding: 8rem 6rem 1rem;
+      }
+
+      .logo {
+        width: 400px;
+        height: auto;
+        border-radius: 24px;
+        box-shadow: 0 0 45px rgba(56, 189, 248, 0.35);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .logo:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 70px rgba(56, 189, 248, 0.55);
+      }
+
+      .hero-text h1 {
+        font-size: 4.5rem;
+        font-weight: 800;
+        background: linear-gradient(to right, #fff, #38bdf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -2px;
+        line-height: 1;
+      }
+
+      .hero-text .subtitle {
+        margin-top: 1rem;
+        font-size: 1.35rem;
+        color: #94a3b8;
+        line-height: 1.6;
+        max-width: 520px;
+      }
+
+      /* --- Bottom Half: Cards --- */
+      .bottom-half {
+        height: 58vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3rem;
+      }
+
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 2.5rem;
+        row-gap: 2rem;
+        width: 100%;
+        max-width: 1400px;
+      }
+
+      .card {
+        width: 440px;
+        background: rgba(15, 23, 42, 0.55);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(56, 189, 248, 0.08);
+        border-radius: 16px;
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        transition:
+          transform 0.25s,
+          border-color 0.25s;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(56, 189, 248, 0.35);
+      }
+
+      .card-icon {
+        color: #38bdf8;
+        width: 36px;
+        height: 36px;
+      }
+
+      .card-icon svg {
+        width: 36px;
+        height: 36px;
+        stroke-width: 1.5;
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .card-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #38bdf8;
+      }
+
+      .card-desc {
+        font-size: 1.05rem;
+        color: #94a3b8;
+        line-height: 1.55;
+      }
+
+      /* --- Footer: Fixed bottom-right --- */
+      .footer {
+        position: fixed;
+        bottom: 2.5rem;
+        right: 3rem;
+        font-size: 1.25rem;
+        color: #475569;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .footer strong {
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Half: Hero -->
+    <section class="hero">
+      <img src="/assets/logo.png" alt="SkyJARVIS" class="logo" />
+      <div class="hero-text">
+        <h1>SkyJARVIS</h1>
+        <p class="subtitle">
+          Autonomous Agentic Drone Control System with AI reasoning using LLMs
+        </p>
+      </div>
+    </section>
+
+    <!-- Bottom Half: Cards + Footer -->
+    <div class="bottom-half">
+      <section class="features">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i data-lucide="brain" class="lucide-icon"></i>
+            </div>
+            <div class="card-title">Semantic Reasoning</div>
+          </div>
+          <p class="card-desc">
+            Context-aware decisions that adapt to real-time mission conditions
+            instead of rigid rules.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i data-lucide="refresh-cw" class="lucide-icon"></i>
+            </div>
+            <div class="card-title">Cyclic State Machine</div>
+          </div>
+          <p class="card-desc">
+            Continuous Plan → Execute → Monitor → Adapt loop for dynamic
+            mid-flight reasoning.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i data-lucide="hand-helping" class="lucide-icon"></i>
+            </div>
+            <div class="card-title">Human-in-the-Loop</div>
+          </div>
+          <p class="card-desc">
+            Visual mission review on a mobile map—confirm, abort, or refine
+            before execution.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i data-lucide="plug" class="lucide-icon"></i>
+            </div>
+            <div class="card-title">Universal Compatibility</div>
+          </div>
+          <p class="card-desc">
+            Works with any PX4 hardware and LLMs from GPT-4 to lightweight edge
+            models.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <i data-lucide="shield-check" class="lucide-icon"></i>
+            </div>
+            <div class="card-title">Multi-Layer Guardrails</div>
+          </div>
+          <p class="card-desc">
+            Four validation layers block unsafe or hallucinated commands before
+            they reach the drone.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <i
+          data-lucide="zap"
+          style="width: 20px; height: 20px; color: #facc15"
+        ></i>
+        Powered by <strong>FastAPI</strong>, <strong>LangChain</strong>, &
+        <strong>LangGraph</strong>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
