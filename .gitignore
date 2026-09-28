@@ -46,7 +46,6 @@ frontend/expo-env.d.ts
 frontend/ios/
 frontend/android/
 frontend/expo-env.d.ts
-backend/.env
 
 # Common patterns
 *.pem
